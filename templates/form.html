@@ -1,0 +1,16 @@
+<h1 class="text-center text-white">Text Anonymizer</h1>
+
+Enter text below:
+
+<form method="POST">
+    <textarea name="text" cols="50" rows="10"></textarea></br>
+    <input type="submit" value="Anonymize text!">
+</form>
+
+{% if anonymized_text %}
+<h2 class="text-center text-white">Original text:</h2>
+    {{original_text}}</br>
+
+    <h2 class="text-center text-white">Anonymized text:</h2>
+    {{anonymized_text}}
+{% endif %}
