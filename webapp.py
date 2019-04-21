@@ -3,7 +3,7 @@ import text_anonymizer
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET'])
+@app.route('/')
 def my_form():
     print('rendering template ...')
     return render_template('form.html')
