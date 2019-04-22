@@ -10,6 +10,14 @@ Approach 2:
 
 '''
 
+'''
+To do:
+    - Fix ending white space
+    - Anonymize selective entity types
+    - Option to replace with made up name in addition to place holders
+    - Create stand-alone API
+'''
+
 
 import en_core_web_sm
 
