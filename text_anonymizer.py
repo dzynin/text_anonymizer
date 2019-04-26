@@ -23,9 +23,10 @@ import en_core_web_sm
 
 def replace_name_with_placeholder(token):
     if token.ent_iob != 0 and token.ent_type_ == "PERSON":
-        return "[REDACTED]"
+        txt = "[REDACTED]"
     else:
-        return token.text
+        txt = token.text
+    return txt + token.whitespace_
 
 def anonymize_placeholder(text):
     nlp = en_core_web_sm.load()
