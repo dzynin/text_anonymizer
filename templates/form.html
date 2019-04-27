@@ -1,9 +1,49 @@
 <h1 class="text-center text-white">Text Anonymizer</h1>
 
-Enter text below:
+
 
 <form method="POST">
-    <textarea name="text" cols="50" rows="10"></textarea></br>
+    Enter text below:</br>
+    <textarea name="text" cols="50" rows="10"></textarea></br></br>
+
+    <!--
+    Which type of names whoud like to anonymize?</br>
+    <input type="text" name="name_types" placeholder="e.g., person, date"></br></br>
+    -->
+
+
+    Which type of name whoud like to anonymize?
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="person" value="PERSON" checked>
+        <label for="person">Person</label>
+    </div>
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="norp" value="NORP">
+        <label for="norp">Nationalities or religious or political groups</label>
+    </div>
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="org" value="ORG">
+        <label for="org">Companies, agencies, institutions, etc.</label>
+    </div>
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="gpe" value="GPE">
+        <label for="gpe">Countries, cities, states</label>
+    </div>
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="date" value="DATE">
+        <label for="date">Date</label>
+    </div>        
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="language" value="LANGUAGE">
+        <label for="language">Languages</label>
+    </div>
+    <div>
+        <input type="checkbox" name="name_types_checkbox" id="money" value="MONEY">
+        <label for="money">Monetary values</label>
+    </div>
+
+    </br>
+
     <input type="submit" value="Anonymize text!">
 </form>
 

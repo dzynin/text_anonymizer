@@ -11,7 +11,9 @@ def my_form():
 @app.route('/', methods=['POST'])
 def my_form_post():
     text = request.form['text']
-    anonymized_text = text_anonymizer.anonymize_placeholder(text)
+    #name_types = [x.strip() for x in request.form['name_types'].upper().split(sep=',')]
+    name_types = request.form.getlist('name_types_checkbox')
+    anonymized_text = text_anonymizer.anonymize_placeholder(text, name_types=name_types)
     return render_template('form.html',
                            original_text = text,
                            anonymized_text = anonymized_text)

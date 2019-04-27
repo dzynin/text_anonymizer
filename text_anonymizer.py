@@ -27,7 +27,7 @@ def replace_name_with_placeholder(token, name_types=["PERSON"]):
     token type.
     Inputs:
         token: spaCy token object
-        name_types: name types to be annonymized (default = "PERSON")
+        name_types: name types to be anonymized (default = "PERSON")
                     valid types include:
                         PERSON	People, including fictional.
                         NORP	Nationalities or religious or political groups.
@@ -59,10 +59,10 @@ def replace_name_with_placeholder(token, name_types=["PERSON"]):
 
 def anonymize_placeholder(text, name_types=["PERSON"]):
     '''
-    Annonymize a piece of text by replacing names with a place holder.
+    Anonymize a piece of text by replacing names with a place holder.
     Inputs:
         text: input text
-        name_types: name types to be annonymized (default = "PERSON")
+        name_types: name types to be anonymized (default = "PERSON")
                     valid types include:
                         PERSON	People, including fictional.
                         NORP	Nationalities or religious or political groups.
@@ -83,7 +83,7 @@ def anonymize_placeholder(text, name_types=["PERSON"]):
                         ORDINAL	“first”, “second”, etc.
                         CARDINAL	Numerals that do not fall under another type.
     Outputs:
-        text: annonymized text
+        text: anonymized text
     '''
     nlp = en_core_web_sm.load()
     
