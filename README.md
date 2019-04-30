@@ -9,7 +9,7 @@
 It is common for journalists and content producers to anonymize stories or redact documents for privacy and/or security reasons. Depending on the content, various parts of the text may need to be anonymized/redacted. This may include name of individuals, locations, dates, monetary values, etc.
 
 ### Part-of-speech tagging
-Text Anonymizer uses a [spaCy model](https://spacy.io/models) to parse and tag a document following tokenization.
+Text Anonymizer uses the [English core web spaCy model](https://spacy.io/models) to parse and tag a document following tokenization.
 
 ![sample_pos.png](https://github.com/kayvanrad/text_anonymizer/blob/master/images/sample_pos.png)
 
