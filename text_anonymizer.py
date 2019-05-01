@@ -13,6 +13,8 @@ Approach 2:
 '''
 To do:
     - Create stand-alone API
+    - If a person is referred to by first name or last name,
+      the fictional name should adapt accordingly
 '''
 
 
@@ -36,9 +38,17 @@ with open('locations_hg2g.txt','r') as f:
 with open('fictional_language.txt','r') as f:
     fictional_language = [x.strip() for x in f.readlines()]
 
+# list of all the names seen so far.
+# Unlike fictional_person_assignment.keys(), this list includes repeated
+# occurances. It is used to distinguish ambiguity when there are multiple people
+# with the same first or last name.
+seen_people=[]
+
 # dictionary of the actual names (as key)
 # and the assigned fictional names (as values)
 fictional_person_assignment=dict()
+
+# count used to generate "person" if ran out of fictional names
 xcess_person_count = 0
 
 fictional_norp_assignment=dict()
@@ -54,25 +64,54 @@ fictional_language_assignment=dict()
 xcess_language_count = 0
 
 
+def name_seen(s,l):
+    '''
+    Check if a name has been seen befere, and if it has,
+    return the full name.
+    The goal is to address the following scenarios:
+    (1) A name, e.g., John Smith, has been seen before but
+    instead of the full name, only part of it appears again,
+    e.g., only John. (The first appearance of a name is
+    usually the full name.)
+    (2) Return the last seen full name. This is useful when
+    there are different people with the same first or last name,
+    in which case we are probably referring to the last one mentioned.
+
+    '''
+    seen = False
+    full_name = None
+    for x in l:
+        if s in x:
+            seen = True
+            full_name = x
+    return seen, full_name
+
+
 def get_fictional_person(text):
     global fictional_person_assignment
     global xcess_person_count
-    if text in fictional_person_assignment:
-        return fictional_person_assignment[text]
-    else:
+    global seen_people
+    
+    # ckeck to see if the person has been seen before
+    seen, full_name = name_seen(text, seen_people)
+    
+    if not seen:
+        full_name = text # assume the first mention includes the full name
+       
         # check to see if there is any unused fictional name left in the list
-        # if not return a counting place holder
+        # if not return [REDACTED]
         if len(fictional_person_assignment)<len(fictional_person):
             while True:
                 x = fictional_person[random.randint(0,len(fictional_person)-1)]
                 if not x in fictional_person_assignment.values():
                     break
-            fictional_person_assignment[text]=x
-            return fictional_person_assignment[text]
+            fictional_person_assignment[full_name]=x
         else:
             xcess_person_count += 1
-            fictional_person_assignment[text]='[PERSON'+str(xcess_person_count)+']'
-            return fictional_person_assignment[text]
+            fictional_person_assignment[full_name]='[PERSON'+str(xcess_person_count)+']'
+    
+    seen_people.append(full_name)
+    return fictional_person_assignment[full_name] 
         
 def get_fictional_norp(text):
     global fictional_norp_assignment
