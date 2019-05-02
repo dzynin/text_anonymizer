@@ -13,7 +13,8 @@ Approach 2:
 '''
 To do:
     - Create stand-alone API
-    - Feature: resolve gender
+    - match gender for fictional name
+    - anonymize gender (including pronouns)
 '''
 
 
