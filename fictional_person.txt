@@ -19,8 +19,6 @@ Jake Barnes
 Lily Bart
 Yevgeny Bazarov
 Adam Bede
-Bennet family
-Bertram family
 Pierre Bezukhov
 Rupert Birkin
 Anthony Blanche
@@ -28,7 +26,6 @@ Leopold Bloom
 Molly Bloom
 Bobbsey Twins
 William Boldwood
-Bolkonsky family
 James Bond
 The Borrowers
 Josiah Bounderby
@@ -45,7 +42,6 @@ Lily Briscoe
 Dorothea Brooke
 Father Brown
 Inspector Bucket
-Buendía family
 Natty Bumppo
 Billy Bunter
 Rhett Butler
@@ -72,7 +68,6 @@ David Copperfield
 Richard Cory
 Mother Courage
 Ichabod Crane
-Cratchit family
 Janie Crawford
 Gerald Crich
 Guy Crouchback
@@ -82,7 +77,6 @@ Sergeant Cuff
 Edmond Dantès
 Fitzwilliam Darcy
 Charles Darnay
-Dashwood family
 Stephen Dedalus
 Madame Defarge
 Digenis Akritas
@@ -95,7 +89,6 @@ Edwin Drood
 Bulldog Drummond
 Blanche DuBois
 The Duchess
-Elliot family
 Lord Emsworth
 Henry Esmond
 Till Eulenspiegel
@@ -107,7 +100,6 @@ Flora Finching
 Huckleberry Finn
 Jeremiah Flintwinch
 Phileas Fogg
-Forsyte family
 Count Fosco
 Ethan Frome
 Fu Manchu
@@ -117,7 +109,6 @@ Eugene Gant
 Joe Gargery
 Jay Gatsby
 Beau Geste
-Glass family
 Boris Godunov
 Père Goriot
 Eugénie Grandet
@@ -125,7 +116,6 @@ Emmeline Grangerford
 Dorian Gray
 Clyde Griffiths
 Titus Groan
-Guermantes family
 Martin Guerre
 Prince Hal
 Mike Hammer
@@ -147,9 +137,7 @@ Roderick Hudson
 Humbert Humbert
 Humpty Dumpty
 Infant Phenomenon
-Jarndyce family
 Gulley Jimson
-Joad family
 Karamazov brothers
 Anna Karenina
 Carol Kennicott
@@ -164,7 +152,6 @@ Wolf Larsen
 Simon Legree
 Inspector Lestrade
 Konstantine Levin
-Linton family
 Little Em’ly
 Little Eva
 Little Nell
@@ -181,9 +168,7 @@ Abel Magwitch
 Jules Maigret
 Major Major
 March Hare
-March family
 Augie March
-Marchmain family
 Jacob Marley
 Philip Marlowe
 Bertha Mason
@@ -208,8 +193,6 @@ Scarlett O’Hara
 Gabriel Oak
 Eugene Onegin
 Gilbert Osmond
-Palliser family
-Peachum family
 Seth Pecksniff
 Peer Gynt
 Clara Peggotty
@@ -219,7 +202,6 @@ Billy Pilgrim
 Hercule Poirot
 Ross Poldark
 Aunt Polly
-Pontifex family
 Mary Poppins
 Harry Potter
 Fanny Price
@@ -228,7 +210,6 @@ Allan Quatermain
 Captain Queeg
 Adela Quested
 Daniel Quilp
-Ramsay family
 Basil Ransom
 Rodion Raskolnikov
 Richard III
@@ -236,7 +217,6 @@ Tom Ripley
 Howard Roark
 Robin Hood
 Christopher Robin
-Rostov family
 Barnaby Rudge
 Marmaduke Ruggles
 Horace Rumpole
@@ -255,7 +235,6 @@ Bill Sikes
 Tyrone Slothrop
 George Smiley
 Winston Smith
-Snopes family
 Lucy Snowe
 Halvard Solness
 Hetty Sorrel
@@ -268,7 +247,6 @@ Willie Stark
 James Steerforth
 Lambert Strether
 Esther Summerson
-Sutpen family
 Charles Swann
 Verena Tarrant
 Suky Tawdry
@@ -285,7 +263,6 @@ Uncle Tom
 Jean Valjean
 Philo Vance
 Dolly Varden
-Varner family
 Diggory Venn
 Captain Vere
 Rosamond Vincy
@@ -300,7 +277,6 @@ Agnes Wickfield
 Tom Wilcher
 Damon Wildeve
 Pudd’nhead Wilson
-Wingfield family
 Nero Wolfe
 Emma Woodhouse
 Bertie Wooster
