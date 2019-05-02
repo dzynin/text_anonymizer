@@ -13,8 +13,6 @@ Approach 2:
 '''
 To do:
     - Create stand-alone API
-    - If a person is referred to by first name or last name,
-      the fictional name should adapt accordingly
 '''
 
 
@@ -86,7 +84,26 @@ def name_seen(s,l):
             full_name = x
     return seen, full_name
 
-
+def match_fictional_name(text, full_name, full_fictional_name):
+    '''
+    match fictional name with how the real name was called - e.g., if only
+    called by first name, return only the first name of the fictional name.
+    Inputs:
+        text: string - the original name as called in the text
+        full_name: string - the original full name
+        full_fictional_name: string - the full fictional name
+    Output: string - the matched fictional name
+    '''
+    if text == full_name:
+        return full_fictional_name
+    l_name = full_name.split()
+    l_fictional_name = full_fictional_name.split()
+    if l_name.index(text) == 0:
+        return l_fictional_name[0]
+    else:
+        return l_fictional_name[1]
+    
+    
 def get_fictional_person(text):
     global fictional_person_assignment
     global xcess_person_count
@@ -111,7 +128,7 @@ def get_fictional_person(text):
             fictional_person_assignment[full_name]='[PERSON'+str(xcess_person_count)+']'
     
     seen_people.append(full_name)
-    return fictional_person_assignment[full_name] 
+    return match_fictional_name(text, full_name, fictional_person_assignment[full_name])
         
 def get_fictional_norp(text):
     global fictional_norp_assignment
