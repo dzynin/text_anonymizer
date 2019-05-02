@@ -21,7 +21,7 @@ import en_core_web_sm, random
 # reset random seed generator
 random.seed(0)
 
-with open('fictional_person.txt','r') as f:
+with open('characters_hg2g.txt','r') as f:
     fictional_person = [x.strip() for x in f.readlines()]
 
 with open('fictional_races.txt','r') as f:
@@ -30,7 +30,7 @@ with open('fictional_races.txt','r') as f:
 with open('fictional_organization.txt','r') as f:
     fictional_org = [x.strip() for x in f.readlines()]
 
-with open('fictional_person.txt','r') as f:
+with open('locations_hg2g.txt','r') as f:
     fictional_gpe = [x.strip() for x in f.readlines()]
 
 with open('fictional_language.txt','r') as f:
