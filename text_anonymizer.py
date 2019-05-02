@@ -127,7 +127,7 @@ def get_fictional_person(text):
             fictional_person_assignment[full_name]=x
         else:
             xcess_person_count += 1
-            fictional_person_assignment[full_name]='[PERSON'+str(xcess_person_count)+']'
+            fictional_person_assignment[full_name]='FIRSTNAME'+str(xcess_person_count)+' '+'LASTNAME'+str(xcess_person_count)
     
     seen_people.append(full_name)
     return match_fictional_name(text, full_name, fictional_person_assignment[full_name])
