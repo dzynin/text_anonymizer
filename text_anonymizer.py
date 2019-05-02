@@ -13,6 +13,7 @@ Approach 2:
 '''
 To do:
     - Create stand-alone API
+    - Feature: resolve gender
 '''
 
 
