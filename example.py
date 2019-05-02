@@ -13,6 +13,15 @@ Noam Chomsky’s Syntactic Structures revolutionized Linguistics with
 Alan Turing is widely considered to be the father of theoretical computer science.
 """
 
+text = """
+Thomas Edison was an American inventor and businessman. Thomas was born
+in 1847 in Milan, Ohio. Edison was on hand to turn on the lights at the
+Hotel Edison in New York City when it opened in 1931.
+
+Thomas Jefferson served as the third president of the United States
+from 1801 to 1809. Thomas was born on April 13, 1743.
+"""
+
 print(text)
 
 print(text_anonymizer.anonymize(text,name_types=["PERSON"], fictional=False))
