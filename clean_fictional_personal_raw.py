@@ -13,6 +13,7 @@ clean_lines = [x[0:x.find('(')].strip() for x in lines]
 
 with open('fictional_person.txt','w') as f:
     for s in clean_lines:
-        if len(s)>1:
+        l = s.split()
+        if len(s)>1 and len(l)==2 and not '.' in s and not ',' in s and not l[0].lower() in ['miss','sir','big']:
             f.write(f"{s}\n")
 
