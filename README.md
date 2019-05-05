@@ -6,7 +6,7 @@
 **Author:** [Aras Kayvanrad](https://www.linkedin.com/in/kayvanrad/).
 **Company:** Insight Data Science, Toronto
 
-It is common for journalists and content producers to anonymize stories or redact documents for privacy and/or security reasons, or to reduce bias based on sex, ethnicity, etc. that names can carry. For example, a hiring manager may wish to anonymize the portfolio of the applicants to reduce hiring bias. Depending on the content, various parts of the text may need to be anonymized/redacted. This may include name of individuals, locations, dates, monetary values, etc.
+It is common for journalists and content producers to anonymize stories or redact documents for confidentiality, privacy, and/or security reasons, or to reduce bias based on sex, ethnicity, etc. that names can carry. For example, a hiring manager may wish to anonymize the portfolio of the applicants to reduce hiring bias. Depending on the content, various parts of the text may need to be anonymized/redacted. This may include name of individuals, locations, dates, monetary values, etc.
 
 Through the web app, the user selects the entity type(s) that she wishes to anonymize. Text Anonymizer currently supports the following entity types: 
 - Person
