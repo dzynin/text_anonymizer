@@ -19,36 +19,18 @@ Through the web app, the user selects the entity type(s) that she wishes to anon
 
 The app provides the option to to redact the text by replacing these entities with a place holder or to replace them with fictional names, as it is often desired to replace names of individuals, places, languages, etc. with fictional names rather than with a place holder to maintain the integrity of the story. Text Anonymizer uses a list of fictional characters, places, languages, etc. to anonymize stories with fictional names should the user wish to do so.
 
-### Natural language processing (NLP)
-Text Anonymizer uses the [English core web spaCy model](https://spacy.io/models) to parse and tag a document following tokenization.
+### Natural language processing (NLP) pipeline
+**(a) Tokenization and Part-of-speech tagging**
+![Text Anonymizer NLP pipeline - Tokenization/PoS](https://docs.google.com/drawings/d/e/2PACX-1vSGMfKRnL96zDNtUxB4uG6awfr1qi2LIPzv2zDUoO4vynDEj-KWdPGZlS5r0oajGR8_ugf5HfE6niLY/pub?w=1304&h=505)
 
-![sample_pos.png](https://github.com/kayvanrad/text_anonymizer/blob/master/images/sample_pos.png)
+Text Anonymizer uses the [English core web spaCy model](https://spacy.io/models) for tokenization and document parsing.
 
-Example: redact persons
-```
-[REDACTED] was an American inventor and businessman. [REDACTED] was born
-in 1847 in Milan, Ohio. [REDACTED] was on hand to turn on the lights at the
-Hotel Edison in New York City when it opened in 1931.
+**(b) Unique name identification and fictional name matching**
+![Text Anonymizer NLP pipeline - unique name identification / Fictional name matching](https://docs.google.com/drawings/d/e/2PACX-1vS0jgQNPEimIfJE8hIQBRvJ0ZEGM52bFyVqbQeAzSCD-P6-cfDKDq528anwX-MdjctdnYYr-3rDgleM/pub?w=1315&h=656)
 
-[REDACTED] served as the third president of the United States
-from 1801 to 1809. [REDACTED] was born on April 13, 1743.
-```
+A person can appear in several places in the text, and they may be referred to by full name, first name, or last name. In this example, Thomas Edison is referred to once by full name, once by first name (Thomas), and once by last name (Edison). Moreover, if there are people in the text with the same first or last name, Text Anonymizer attempts to identify which person was referred to based on the text preceeding the reference. In the above example, Thomas Edison and Thomas Jefferson share the same first name. If called by first name, Text Anonymizer attempts to identify the person based on the preceeding text.
 
-In addition to the generic NLP processing, Text Anonymizer performs further processing, specifically for anonymization with fictional names. The following example demonstrates some of the spefic processing:
-
-Example: replace individual names with fictional names
-```
-Humma Kavula was an American inventor and businessman. Humma was born
-in 1847 in Milan, Ohio. Kavula was on hand to turn on the lights at the
-Hotel Edison in New York City when it opened in 1931.
-
-Trillian Astra served as the third president of the United States
-from 1801 to 1809. Trillian was born on April 13, 1743.
-```
-
-A person can appear in several places in the text, and they may be referred to by full name, first name, or last name. In this example, Thomas Edison is referred to once by full name, once by first name (Thomas), and once by last name (Edison). When an entity is identified as a PERSON, Text Anonymizer tries to identify the unique person, and the fictional person assigned to them - or assign a fictional person if the person is seen for the first time. Text Anonymizer then identifies whether the person was called by full name or first / last name, and matches the reference to the ficitonal person accordingly. In the above example, Thomas Edison is given the fictional name Humma Kavula. References to Thomas are replaced with Humma and references to Edison are replaced by Kavula.
-
-Moreover, if there are people in the text with the same first or last name, Text Anonymizer attempts to identify which person was referred to based on the text preceeding the reference. In the above example, Thomas Edison and Thomas Jefferson share the same first name. If called by first name, Text Anonymizer attempts to identify the person based on the preceeding text.
+When an entity is identified as a PERSON, Text Anonymizer tries to identify the unique person, and the fictional person assigned to them - or assign a fictional person if the person is seen for the first time. Text Anonymizer then identifies whether the person was called by full name or first / last name, and matches the reference to the ficitonal person accordingly. In the above example, Thomas Edison is given the fictional name Humma Kavula. References to Thomas are replaced with Humma and references to Edison are replaced by Kavula.
 
 ### Further development
 Text Anonymizer currently does not match gender for fictional names. To use gender specific fictional names, further development will require to identify the gender of the characters referred to in the text. This can be done, for example, based on the associated pronouns.
