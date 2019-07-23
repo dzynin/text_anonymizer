@@ -6,7 +6,7 @@
 **Author:** [Aras Kayvanrad](https://www.linkedin.com/in/kayvanrad/).
 **Company:** Insight Data Science, Toronto
 
-It is common for journalists and content producers to anonymize stories or redact documents for privacy and/or security reasons. Depending on the content, various parts of the text may need to be anonymized/redacted. This may include name of individuals, locations, dates, monetary values, etc.
+It is common for journalists and content producers to anonymize stories or redact documents for confidentiality, privacy, and/or security reasons. Another application would be to reduce the bias based on sex, ethnicity, etc. that names can carry. For example, a hiring manager may wish to anonymize the portfolio of the applicants to reduce hiring bias. Depending on the content, various parts of the text may need to be anonymized/redacted. This may include name of individuals, locations, dates, monetary values, etc.
 
 Through the web app, the user selects the entity type(s) that she wishes to anonymize. Text Anonymizer currently supports the following entity types: 
 - Person
@@ -28,9 +28,9 @@ Text Anonymizer uses the [English core web spaCy model](https://spacy.io/models)
 **(b) Unique name identification and fictional name matching**
 ![Text Anonymizer NLP pipeline - unique name identification / Fictional name matching](https://docs.google.com/drawings/d/e/2PACX-1vS0jgQNPEimIfJE8hIQBRvJ0ZEGM52bFyVqbQeAzSCD-P6-cfDKDq528anwX-MdjctdnYYr-3rDgleM/pub?w=1315&h=656)
 
-A person can appear in several places in the text, and they may be referred to by full name, first name, or last name. In this example, Thomas Edison is referred to once by full name, once by first name (Thomas), and once by last name (Edison). Moreover, if there are people in the text with the same first or last name, Text Anonymizer attempts to identify which person was referred to based on the text preceeding the reference. In the above example, Thomas Edison and Thomas Jefferson share the same first name. If called by first name, Text Anonymizer attempts to identify the person based on the preceeding text.
+A person can appear in several places in the text, and they may be referred to by full name, first name, or last name. In this example, Thomas Edison is referred to once by full name, once by first name (Thomas), and once by last name (Edison). Moreover, if there are people in the text with the same first or last name, Text Anonymizer attempts to identify which person was referred to based on the text preceding the reference. In the above example, Thomas Edison and Thomas Jefferson share the same first name. If called by first name, Text Anonymizer attempts to identify the person based on the preceding text.
 
-When an entity is identified as a PERSON, Text Anonymizer tries to identify the unique person, and the fictional person assigned to them - or assign a fictional person if the person is seen for the first time. Text Anonymizer then identifies whether the person was called by full name or first / last name, and matches the reference to the ficitonal person accordingly. In the above example, Thomas Edison is given the fictional name Humma Kavula. References to Thomas are replaced with Humma and references to Edison are replaced by Kavula.
+When an entity is identified as a PERSON, Text Anonymizer identifies the unique person, and the fictional person assigned to them - or assign a fictional person if the person is seen for the first time. Text Anonymizer then identifies whether the person was called by full name or first / last name, and matches the reference to the fictional person accordingly. In the above example, Thomas Edison is given the fictional name Humma Kavula. References to Thomas are replaced with Humma and references to Edison are replaced by Kavula.
 
 ### Further development
 Text Anonymizer currently does not match gender for fictional names. To use gender specific fictional names, further development will require to identify the gender of the characters referred to in the text. This can be done, for example, based on the associated pronouns.
