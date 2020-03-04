@@ -3,7 +3,7 @@
 
 **Web app:** [https://text-anonymizer.herokuapp.com/](https://text-anonymizer.herokuapp.com/)
 
-**API** OpenAPI [json](https://github.com/kayvanrad/text_anonymizer/blob/master/openapi.json) [yaml](https://github.com/kayvanrad/text_anonymizer/blob/master/openapi.yaml)
+**API** OpenAPI documentation available in [json](https://github.com/kayvanrad/text_anonymizer/blob/master/openapi.json) and [yaml](https://github.com/kayvanrad/text_anonymizer/blob/master/openapi.yaml) format
 
 **Author:** [Aras Kayvanrad](https://www.linkedin.com/in/kayvanrad/).
 **Company:** Insight Data Science, Toronto
